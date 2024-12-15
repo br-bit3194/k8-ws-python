@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  inventory_service:
+    build:
+      context: .
+      dockerfile: inventory_service/Dockerfile
+    ports:
+      - "8082:8082"
+    networks:
+      - coffee_shop_network
+  
+  order_service:
+    build:
+      context: .
+      dockerfile: order_service/Dockerfile
+    depends_on:
+      - inventory_service
+    ports:
+      - "8083:8083"
+    networks:
+      - coffee_shop_network
+    environment:
+      - INVENTORY_SERVICE_URL=http://inventory_service:8082
+
+networks:
+  coffee_shop_network:
+    driver: bridge

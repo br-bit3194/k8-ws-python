@@ -6,3 +6,4 @@ __pycache__/
 
 # Ignore .DS_store files
 .DS_store
+env/*
