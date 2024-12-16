@@ -1,0 +1,30 @@
+## build docker image
+1. make docker file
+2. docker build -t APP_NAME -f FILE_PATH .
+3. docker container run -d -p to:from IMAGE_NAME
+
+## commands
+* docker ps -> 
+	list all the active containers
+* docker stop CONTAINER_ID
+* docker rm CONTAINER_ID
+* docker ps -a -> 
+	see all the active & past containers
+* docker rmi IMAGE_ID
+
+
+## docker-compose
+docker-compose up --build
+
+
+1. take data from .env file -> environment tag in docker-compose.yml
+2. communicate between two containers -> custom network -> docker compose
+3. docker logs
+4. volumes
+5. db connection
+6. depends on -> it is for order of starting the image container in docker-compose.yml
+
+
+
+---- TO-DO
+1. Airflow
