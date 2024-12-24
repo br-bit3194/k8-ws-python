@@ -25,6 +25,13 @@ docker-compose up --build
 6. depends on -> it is for order of starting the image container in docker-compose.yml
 
 
+## docker volumes
+
+1. docker volume ls
+2. docker volume create <NAME>
+3. docker volume inspect <NAME>
+4. docker volume rm <NAME>
+
 
 ---- TO-DO
 1. Airflow
